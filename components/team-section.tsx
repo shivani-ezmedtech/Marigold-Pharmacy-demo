@@ -21,7 +21,7 @@ const pharmacists = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-16 px-4 bg-white">
+    <section id="team" className="py-12 px-1 sm:px-2 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-foreground text-center mb-12">
           Meet Our Pharmacists

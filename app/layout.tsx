@@ -11,21 +11,9 @@ export const metadata: Metadata = {
   description: 'Your trusted community pharmacy providing prescription services, immunizations, delivery, and comprehensive medication management. Expert pharmacists dedicated to your health.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/favicon-new.png',
+    shortcut: '/favicon-new.png',
+    apple: '/apple-icon-new.png',
   },
 }
 

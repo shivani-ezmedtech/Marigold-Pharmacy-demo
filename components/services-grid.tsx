@@ -33,7 +33,7 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="py-16 px-4 bg-muted/30">
+    <section id="services" className="py-12 px-1 sm:px-2 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-foreground text-center mb-4">
           Here&apos;s What We Can Do For You

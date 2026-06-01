@@ -16,7 +16,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-16 px-4 bg-gradient-to-r from-primary/10 to-accent/10">
+    <section id="contact" className="py-12 px-1 sm:px-2 bg-gradient-to-r from-primary/10 to-accent/10">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-foreground text-center mb-12">
           Keep in Touch

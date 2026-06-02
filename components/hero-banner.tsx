@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
 const heroSlides = [
-  '/pharmacy-family-hero.png',
-  '/pharmacy-consultation-marigold.png',
-  '/pharmacy-services.png',
+  '/hero-ai-1.png',
+  '/hero-ai-2.png',
+  '/hero-ai-3.png',
 ]
 
 export default function HeroBanner() {
@@ -16,13 +16,13 @@ export default function HeroBanner() {
             alt="Pharmacy hero background"
             fill
             priority={idx === 0}
-            quality={95}
+            quality={100}
             sizes="100vw"
-            className="object-cover brightness-[1.14] contrast-[1.08] saturate-[1.08]"
+            className="object-cover"
           />
         </div>
       ))}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/62 via-white/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/36 via-white/14 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative z-10 min-h-[620px] md:min-h-[700px]">
         <div className="max-w-[560px] pt-8 md:pt-12">
@@ -34,30 +34,37 @@ export default function HeroBanner() {
             We make it a priority to help your family achieve better health and wholesome lifestyle.
           </p>
 
-          <div className="mt-8 grid grid-cols-2 gap-1 max-w-[520px]">
-            <button className="bg-[#efefef]/95 p-6 min-h-[170px] text-left border border-white/70 hover:bg-white transition">
-              <div className="text-4xl mb-3">💊</div>
-              <div className="text-primary text-[24px] leading-[1]">Auto RX</div>
-              <div className="text-foreground text-[20px] leading-[1]">Refills</div>
+          <div className="mt-6 grid grid-cols-2 gap-2 max-w-[320px]">
+            <button className="group bg-white p-3 aspect-square text-left border border-border shadow-sm hover:bg-white/95 hover:-translate-y-1 hover:shadow-md transition-all duration-300 rounded-md animate-rise-in">
+              <div className="mb-2 relative h-10 w-10">
+                <Image src="/icon-auto-rx.png" alt="Auto RX icon" fill className="object-contain transition-transform duration-300 group-hover:scale-110" />
+              </div>
+              <div className="text-primary text-[21px] leading-[1.05]">Auto RX</div>
+              <div className="text-foreground text-[18px] leading-[1.05]">Refills</div>
             </button>
-            <button className="bg-[#efefef]/95 p-6 min-h-[170px] text-left border border-white/70 hover:bg-white transition">
-              <div className="text-4xl mb-3">💉</div>
-              <div className="text-primary text-[24px] leading-[1]">Refill</div>
-              <div className="text-foreground text-[20px] leading-[1]">Prescription</div>
+            <button className="group bg-white p-3 aspect-square text-left border border-border shadow-sm hover:bg-white/95 hover:-translate-y-1 hover:shadow-md transition-all duration-300 rounded-md animate-rise-in">
+              <div className="mb-2 relative h-10 w-10">
+                <Image src="/icon-refill-prescription.png" alt="Refill prescription icon" fill className="object-contain transition-transform duration-300 group-hover:scale-110" />
+              </div>
+              <div className="text-primary text-[21px] leading-[1.05]">Refill</div>
+              <div className="text-foreground text-[18px] leading-[1.05]">Prescription</div>
             </button>
-            <button className="bg-[#efefef]/95 p-6 min-h-[170px] text-left border border-white/70 hover:bg-white transition">
-              <div className="text-4xl mb-3">🧰</div>
-              <div className="text-primary text-[24px] leading-[1]">Free Delivery</div>
-              <div className="text-foreground text-[20px] leading-[1]">Services</div>
+            <button className="group bg-white p-3 aspect-square text-left border border-border shadow-sm hover:bg-white/95 hover:-translate-y-1 hover:shadow-md transition-all duration-300 rounded-md animate-rise-in">
+              <div className="mb-2 relative h-10 w-10">
+                <Image src="/icon-free-delivery.png" alt="Free delivery icon" fill className="object-contain transition-transform duration-300 group-hover:scale-110" />
+              </div>
+              <div className="text-primary text-[21px] leading-[1.05]">Free Delivery</div>
+              <div className="text-foreground text-[18px] leading-[1.05]">Services</div>
             </button>
-            <button className="bg-[#efefef]/95 p-6 min-h-[170px] text-left border border-white/70 hover:bg-white transition">
-              <div className="text-4xl mb-3">📦</div>
-              <div className="text-primary text-[24px] leading-[1]">Transfer</div>
-              <div className="text-foreground text-[20px] leading-[1]">Prescription</div>
+            <button className="group bg-white p-3 aspect-square text-left border border-border shadow-sm hover:bg-white/95 hover:-translate-y-1 hover:shadow-md transition-all duration-300 rounded-md animate-rise-in">
+              <div className="mb-2 relative h-10 w-10">
+                <Image src="/icon-transfer-prescription.png" alt="Transfer prescription icon" fill className="object-contain transition-transform duration-300 group-hover:scale-110" />
+              </div>
+              <div className="text-primary text-[21px] leading-[1.05]">Transfer</div>
+              <div className="text-foreground text-[18px] leading-[1.05]">Prescription</div>
             </button>
           </div>
         </div>
-
       </div>
     </section>
   )

@@ -159,20 +159,20 @@
 
 @keyframes hero-fade {
   0%,
-  29% {
+  27% {
     opacity: 1;
-    transform: scale(1.01);
+    transform: scale(1.02);
   }
-  35%,
+  36%,
   100% {
     opacity: 0;
-    transform: scale(1.045);
+    transform: scale(1.07);
   }
 }
 
 .hero-slide {
   opacity: 0;
-  animation: hero-fade 15s infinite ease-in-out;
+  animation: hero-fade 18s infinite ease-in-out;
   will-change: opacity, transform;
 }
 
@@ -181,9 +181,50 @@
 }
 
 .hero-slide-2 {
-  animation-delay: 5s;
+  animation-delay: 6s;
 }
 
 .hero-slide-3 {
-  animation-delay: 10s;
+  animation-delay: 12s;
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 900ms ease-out both;
+}
+
+@keyframes rise-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise-in {
+  animation: rise-in 700ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide,
+  .animate-slide-in-right,
+  .animate-rise-in,
+  .animate-float-slow,
+  .animate-float-delayed {
+    animation: none !important;
+    transform: none !important;
+  }
 }

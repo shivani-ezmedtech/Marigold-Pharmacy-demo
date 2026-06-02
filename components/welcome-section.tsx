@@ -1,18 +1,18 @@
 import Image from 'next/image'
-import { ShieldCheck } from 'lucide-react'
+import { FileText } from 'lucide-react'
 
 export default function WelcomeSection() {
   return (
-    <section className="py-12 px-1 sm:px-2 bg-white">
+    <section className="pt-10 pb-0 px-1 sm:px-2 bg-white relative z-10">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.45fr_0.9fr] gap-8 items-start">
-          <div className="relative min-h-[520px] rounded-2xl overflow-hidden border border-border/40 bg-[#f5f5f5] shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.02fr_1.25fr_0.72fr] gap-7 items-start">
+          <div className="relative min-h-[620px] animate-rise-in overflow-hidden">
             <Image
-              src="/pharmacy-team.png"
-              alt="Two pharmacy professionals discussing care details"
+              src="/welcome-ai-natural-left.png"
+              alt="Two women in a pharmacy reviewing a file"
               fill
               quality={100}
-              className="object-contain object-bottom"
+              className="object-cover object-center"
             />
           </div>
 
@@ -38,21 +38,20 @@ export default function WelcomeSection() {
             </p>
           </div>
 
-          <aside className="rounded-2xl border border-primary/20 bg-gradient-to-b from-white via-primary/10 to-accent/15 p-6 shadow-md lg:sticky lg:top-36">
-            <div className="flex items-start gap-3 mb-4">
-              <div className="h-11 w-11 rounded-full bg-primary/15 text-primary flex items-center justify-center shadow-sm">
-                <ShieldCheck className="h-6 w-6" />
+          <aside className="border border-secondary/10 bg-secondary/10 p-8 lg:sticky lg:top-28 animate-rise-in min-h-[560px] flex flex-col">
+            <div className="flex flex-col items-center text-center mb-4">
+              <div className="h-16 w-16 text-secondary flex items-center justify-center mb-3">
+                <FileText className="h-14 w-14 stroke-[1.5]" />
               </div>
-              <div>
-                <h4 className="text-2xl font-bold text-foreground leading-tight">Insurance Accepted</h4>
-              </div>
+              <h4 className="text-4xl leading-[0.95] font-light text-primary tracking-tight">Insurance</h4>
+              <h4 className="text-4xl leading-[0.95] font-light text-foreground tracking-tight">Accepted</h4>
             </div>
 
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-foreground/85 leading-relaxed text-lg mb-6">
               We accept most insurance plans. If you do not have insurance, you may take advantage of our $4 prescription plan. Please give us a call for more details.
             </p>
 
-            <button className="inline-flex items-center rounded-full bg-gradient-to-r from-primary to-emerald-500 px-6 py-2.5 text-white font-medium hover:opacity-95 transition shadow-sm">
+            <button className="mt-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary/85 to-accent hover:from-primary hover:to-accent px-7 py-3 text-primary-foreground font-medium hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5 shadow-sm">
               Click Here &rsaquo;
             </button>
           </aside>

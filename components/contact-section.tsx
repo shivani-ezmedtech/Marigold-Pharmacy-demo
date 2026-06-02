@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function ContactSection() {
@@ -16,90 +17,75 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-12 px-1 sm:px-2 bg-gradient-to-r from-primary/10 to-accent/10">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-foreground text-center mb-12">
-          Keep in Touch
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-8">Contact Information</h3>
-            
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-bold text-foreground mb-2">Address</h4>
-                <p className="text-muted-foreground">123 Healthcare Avenue, Your City, ST 12345</p>
-              </div>
-              
-              <div>
-                <h4 className="font-bold text-foreground mb-2">Phone</h4>
-                <p className="text-muted-foreground">(555) 123-4567</p>
-              </div>
-              
-              <div>
-                <h4 className="font-bold text-foreground mb-2">Email</h4>
-                <p className="text-muted-foreground">hello@marigoldpharmacy.com</p>
-              </div>
-              
-              <div>
-                <h4 className="font-bold text-foreground mb-2">Hours</h4>
-                <div className="text-muted-foreground space-y-1">
-                  <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
-                  <p>Saturday: 10:00 AM - 5:00 PM</p>
-                  <p>Sunday: Closed</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <form onSubmit={handleSubmit} className="space-y-4 bg-white p-8 rounded-lg shadow-sm">
-            <div>
-              <label className="block text-foreground font-medium mb-2">Name</label>
+    <section id="contact" className="py-14 px-1 sm:px-2 relative overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/keepintouch-medicine-bg.png"
+          alt="Medicine background"
+          fill
+          quality={100}
+          className="object-cover"
+        />
+      </div>
+      <div className="absolute inset-0 bg-cyan-900/18" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-4xl mr-auto lg:ml-6 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] overflow-hidden shadow-xl border border-white/40 animate-rise-in">
+          <form onSubmit={handleSubmit} className="bg-background/95 p-8 md:p-10">
+            <h2 className="text-5xl font-light leading-none text-primary">Keep in Touch</h2>
+            <p className="mt-3 text-foreground/85 text-lg">
+              How can we help you? Please send your message below.
+            </p>
+
+            <div className="mt-8 space-y-4">
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Your name"
+                className="w-full px-6 py-3 border border-border rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-primary/60"
+                placeholder="* full name"
                 required
               />
-            </div>
-            
-            <div>
-              <label className="block text-foreground font-medium mb-2">Email</label>
+
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="your@email.com"
+                className="w-full px-6 py-3 border border-border rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-primary/60"
+                placeholder="* email address"
                 required
               />
-            </div>
-            
-            <div>
-              <label className="block text-foreground font-medium mb-2">Message</label>
-              <textarea
+
+              <input
+                type="text"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                placeholder="Your message"
-                rows={5}
+                className="w-full px-6 py-3 border border-border rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-primary/60"
+                placeholder="enter your message here"
                 required
               />
             </div>
-            
+
             <button
               type="submit"
-              className="w-full bg-primary text-primary-foreground py-2 rounded-lg font-medium hover:bg-primary/90 transition"
+              className="mt-6 w-full rounded-full bg-gradient-to-r from-primary/85 to-accent hover:from-primary hover:to-accent py-3 text-primary-foreground font-medium transition-all duration-300 hover:-translate-y-0.5"
             >
-              Send Message
+              SUBMIT MESSAGE &rsaquo;
             </button>
           </form>
+
+          <div className="relative min-h-[520px]">
+            <Image
+              src="/pharmacy-consultation-marigold.png"
+              alt="Pharmacist consulting a customer"
+              fill
+              quality={100}
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

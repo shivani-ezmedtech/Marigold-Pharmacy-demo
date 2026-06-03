@@ -80,8 +80,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: 'Trebuchet MS', 'Segoe UI', 'Aptos', sans-serif;
+  --font-mono: 'Consolas', 'Courier New', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -126,6 +126,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
 

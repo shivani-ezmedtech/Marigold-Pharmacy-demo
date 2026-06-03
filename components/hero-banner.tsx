@@ -18,7 +18,7 @@ export default function HeroBanner() {
             priority={idx === 0}
             quality={100}
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-[center_16%]"
           />
         </div>
       ))}

@@ -13,7 +13,7 @@ export default function ContactInformationSection() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mx-auto grid max-w-4xl grid-cols-1 lg:grid-cols-[0.72fr_1.28fr] overflow-hidden rounded-[1.25rem] border border-white/25 bg-white/72 shadow-lg backdrop-blur-sm">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] overflow-hidden rounded-[1.25rem] border border-white/25 bg-white/72 shadow-lg backdrop-blur-sm">
           <div className="bg-background/92 p-4 sm:p-5 lg:p-5.5 animate-rise-in">
             <h2 className="text-2xl sm:text-3xl font-light leading-tight text-primary">
               Contact
@@ -81,15 +81,6 @@ export default function ContactInformationSection() {
             />
 
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-secondary/10 pointer-events-none" />
-
-            <div className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[10px] sm:text-xs font-medium text-foreground shadow-md backdrop-blur">
-              4792 Marigold Ave, Kissimmee, FL 34758
-            </div>
-
-            <div className="absolute bottom-3 right-3 rounded-2xl bg-white/90 px-3 py-2 shadow-lg backdrop-blur">
-              <p className="text-xs font-semibold text-secondary">Marigold Pharmacy</p>
-              <p className="text-[10px] text-foreground/70">Open Monday-Friday, 10 AM - 6 PM</p>
-            </div>
           </div>
         </div>
       </div>

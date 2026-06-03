@@ -35,38 +35,31 @@ export default function Header() {
             {/* Navigation */}
             <nav className="flex items-center gap-4 xl:gap-5">
               <Link href="/" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-none">Home</span>
-                <span className="text-[9px] xl:text-[11px] text-muted-foreground group-hover:text-primary/70 transition-colors mt-1 font-medium">Welcome Page</span>
+                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">HOME</span>
               </Link>
               <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="#about" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-none">About Us</span>
-                <span className="text-[9px] xl:text-[11px] text-muted-foreground group-hover:text-primary/70 transition-colors mt-1 font-medium">Who We Are</span>
+              <Link href="/about-us" className="group flex flex-col items-center text-center">
+                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">ABOUT US</span>
               </Link>
               <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="#services" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-none">Services</span>
-                <span className="text-[9px] xl:text-[11px] text-muted-foreground group-hover:text-primary/70 transition-colors mt-1 font-medium">We Offer</span>
+              <Link href="/services" className="group flex flex-col items-center text-center">
+                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">SERVICES</span>
               </Link>
               <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
               <Link href="#medical-supplies" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-none">Medical Supplies</span>
-                <span className="text-[9px] xl:text-[11px] text-muted-foreground group-hover:text-primary/70 transition-colors mt-1 font-medium">Our Products</span>
+                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">MEDICAL SUPPLIES</span>
               </Link>
               <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="#moringa" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-none">Moringa</span>
-                <span className="text-[9px] xl:text-[11px] text-muted-foreground group-hover:text-primary/70 transition-colors mt-1 font-medium">Leaf Capsules</span>
+              <Link href="https://gatusmoringa.com/" target="_blank" rel="noreferrer" className="group flex flex-col items-center text-center">
+                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">MORINGA</span>
               </Link>
               <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="#resources" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-none">Resources</span>
-                <span className="text-[9px] xl:text-[11px] text-muted-foreground group-hover:text-primary/70 transition-colors mt-1 font-medium">Useful Links</span>
+              <Link href="/resources" className="group flex flex-col items-center text-center">
+                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">RESOURCES</span>
               </Link>
               <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="#contact" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-none">Contact Us</span>
-                <span className="text-[9px] xl:text-[11px] text-muted-foreground group-hover:text-primary/70 transition-colors mt-1 font-medium">Keep in Touch</span>
+              <Link href="/contact-us" className="group flex flex-col items-center text-center">
+                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">CONTACT US</span>
               </Link>
             </nav>
           </div>

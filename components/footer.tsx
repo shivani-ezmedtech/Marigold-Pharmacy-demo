@@ -23,19 +23,19 @@ export default function Footer() {
             </div>
 
             <nav className="flex items-center flex-wrap justify-center gap-4 xl:gap-5 text-white/90">
-              <Link href="/" className="hover:text-white transition text-sm font-medium">Home</Link>
+              <Link href="/" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">HOME</Link>
               <span className="text-white/35">|</span>
-              <Link href="#about" className="hover:text-white transition text-sm font-medium">About Us</Link>
+              <Link href="/about-us" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">ABOUT US</Link>
               <span className="text-white/35">|</span>
-              <Link href="#services" className="hover:text-white transition text-sm font-medium">Services</Link>
+              <Link href="#services" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">SERVICES</Link>
               <span className="text-white/35">|</span>
-              <Link href="#medical-supplies" className="hover:text-white transition text-sm font-medium">Medical Supplies</Link>
+              <Link href="#medical-supplies" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">MEDICAL SUPPLIES</Link>
               <span className="text-white/35">|</span>
-              <Link href="#moringa" className="hover:text-white transition text-sm font-medium">Moringa</Link>
+              <Link href="https://gatusmoringa.com/" target="_blank" rel="noreferrer" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">MORINGA</Link>
               <span className="text-white/35">|</span>
-              <Link href="#resources" className="hover:text-white transition text-sm font-medium">Resources</Link>
+              <Link href="/resources" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">RESOURCES</Link>
               <span className="text-white/35">|</span>
-              <Link href="#contact" className="hover:text-white transition text-sm font-medium">Contact Us</Link>
+              <Link href="/contact-us" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">CONTACT US</Link>
             </nav>
 
             <div className="rounded-full bg-gradient-to-r from-primary/85 to-accent px-8 py-2 text-sm xl:text-base text-primary-foreground min-w-[360px] text-center font-medium whitespace-nowrap">

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { FileText } from 'lucide-react'
 
 export default function WelcomeSection() {
@@ -6,14 +7,15 @@ export default function WelcomeSection() {
     <section className="pt-10 pb-0 px-1 sm:px-2 bg-white relative z-10">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1.02fr_1.25fr_0.72fr] gap-7 items-start">
-          <div className="relative min-h-[620px] animate-rise-in overflow-hidden">
+          <div className="relative min-h-[620px] animate-rise-in overflow-hidden rounded-[2rem]">
             <Image
               src="/welcome-ai-natural-left.png"
               alt="Two women in a pharmacy reviewing a file"
               fill
               quality={100}
-              className="object-cover object-center"
+              className="object-cover object-[center_10%]"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/15 via-transparent to-transparent" />
           </div>
 
           <div>
@@ -38,7 +40,7 @@ export default function WelcomeSection() {
             </p>
           </div>
 
-          <aside className="border border-secondary/10 bg-secondary/10 p-8 lg:sticky lg:top-28 animate-rise-in min-h-[560px] flex flex-col">
+          <aside className="border border-secondary/10 bg-secondary/10 p-8 animate-rise-in min-h-[560px] flex flex-col">
             <div className="flex flex-col items-center text-center mb-4">
               <div className="h-16 w-16 text-secondary flex items-center justify-center mb-3">
                 <FileText className="h-14 w-14 stroke-[1.5]" />
@@ -48,12 +50,19 @@ export default function WelcomeSection() {
             </div>
 
             <p className="text-foreground/85 leading-relaxed text-lg mb-6">
-              We accept most insurance plans. If you do not have insurance, you may take advantage of our $4 prescription plan. Please give us a call for more details.
+              We accept most insurance plans. If you do not have insurance, you may take advantage of our{' '}
+              <Link href="/services/4-prescription-plan" className="font-semibold text-secondary underline decoration-secondary/40 underline-offset-4 transition hover:text-primary hover:decoration-primary">
+                $4 prescription plan
+              </Link>
+              . Please give us a call for more details.
             </p>
 
-            <button className="mt-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary/85 to-accent hover:from-primary hover:to-accent px-7 py-3 text-primary-foreground font-medium hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5 shadow-sm">
+            <Link
+              href="/insurance-accepted"
+              className="mt-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary/85 to-accent hover:from-primary hover:to-accent px-7 py-3 text-primary-foreground font-medium hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5 shadow-sm"
+            >
               Click Here &rsaquo;
-            </button>
+            </Link>
           </aside>
         </div>
       </div>

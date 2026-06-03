@@ -38,35 +38,50 @@ export default function ContactSection() {
             </p>
 
             <div className="mt-8 space-y-4">
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-6 py-3 border border-border rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-primary/60"
-                placeholder="* full name"
-                required
-              />
+              <label className="grid gap-2">
+                <span className="text-sm font-semibold uppercase tracking-wide text-foreground">
+                  Full Name <span className="ml-1">*</span>
+                </span>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-6 py-3 border border-border rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-primary/60"
+                  placeholder="Enter Full Name Here"
+                  required
+                />
+              </label>
 
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-6 py-3 border border-border rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-primary/60"
-                placeholder="* email address"
-                required
-              />
+              <label className="grid gap-2">
+                <span className="text-sm font-semibold uppercase tracking-wide text-foreground">
+                  Email Address <span className="ml-1">*</span>
+                </span>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-6 py-3 border border-border rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-primary/60"
+                  placeholder="Enter Email Address Here"
+                  required
+                />
+              </label>
 
-              <input
-                type="text"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full px-6 py-3 border border-border rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-primary/60"
-                placeholder="enter your message here"
-                required
-              />
+              <label className="grid gap-2">
+                <span className="text-sm font-semibold uppercase tracking-wide text-foreground">
+                  Message <span className="ml-1">*</span>
+                </span>
+                <input
+                  type="text"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-6 py-3 border border-border rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-primary/60"
+                  placeholder="Enter Your Message Here"
+                  required
+                />
+              </label>
             </div>
 
             <button

@@ -35,8 +35,10 @@ export default function SeasonalVaccinationsSection() {
           <div className="mt-4 h-px bg-secondary/55" />
 
           <div className="mt-10">
-            <div className="inline-flex max-w-4xl items-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md">
-              Get the latest, appropriate, and recommended seasonal vaccines for you and your family today.
+            <div className="flex justify-center">
+              <div className="flex w-full max-w-5xl items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-center text-base sm:text-lg font-medium text-white shadow-md">
+                Get the latest, appropriate, and recommended seasonal vaccines for you and your family today.
+              </div>
             </div>
 
             <div className="mt-8 rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-sm">

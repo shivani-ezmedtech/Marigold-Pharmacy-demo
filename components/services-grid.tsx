@@ -24,13 +24,13 @@ export default function ServicesGrid() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="rounded-[1.25rem] p-5 shadow-sm border border-primary/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[220px] flex flex-col bg-gradient-to-br from-white via-primary/10 to-secondary/15 animate-rise-in"
+              className="rounded-[1.25rem] p-5 shadow-sm border border-primary/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[220px] flex flex-col items-center text-center bg-gradient-to-br from-white via-primary/10 to-secondary/15 animate-rise-in"
             >
-              <div className="mb-3">
+              <div className="mb-3 flex justify-center">
                 <service.Icon className={`h-12 w-12 ${service.tone}`} strokeWidth={2.1} />
               </div>
 
-              <h3 className="mb-3 leading-tight min-h-[5.25rem]">
+              <h3 className="mb-3 flex min-h-[5.25rem] flex-col items-center justify-center leading-tight">
                 <span className="block text-[21px] font-semibold text-secondary leading-tight">{service.highlight}</span>
                 <span className="block text-[19px] font-medium text-foreground leading-tight">{service.rest}</span>
               </h3>

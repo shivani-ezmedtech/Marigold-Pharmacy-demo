@@ -67,7 +67,7 @@ export default function ServicesOverviewSection() {
             </p>
 
             <p className="mt-4 max-w-5xl text-base sm:text-lg leading-relaxed text-foreground/80">
-              We are located at the beautiful Traditional Downtown of Kissimmee. Come right in to meet with our friendly staff or call us at 407-750-5999 and speak with our knowledgeable staff. We would be glad to serve you.
+              Pharmacy is located in a community with a 70 % Hispanic population. Marigold Pharmacy is right next to Walgreens Pharmacy. Come right in to meet with our friendly staff or call us at 407-201-4640 and speak with our knowledgeable staff. We would be glad to serve you.
             </p>
           </div>
         </div>

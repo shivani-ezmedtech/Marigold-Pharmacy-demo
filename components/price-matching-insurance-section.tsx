@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function PriceMatchingInsuranceSection() {
   return (
@@ -35,23 +36,38 @@ export default function PriceMatchingInsuranceSection() {
           <div className="mt-4 h-px bg-secondary/55" />
 
           <div className="mt-10">
-            <div className="inline-flex max-w-4xl items-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md">
-              We offer price matching and insurance billing for your prescriptions.
+            <div className="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md text-center">
+              <span className="max-w-4xl">
+                We offer price matching and insurance billing for your prescriptions.
+              </span>
             </div>
 
             <div className="mt-8 rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-sm">
               <div className="grid grid-cols-1 lg:grid-cols-[0.96fr_1.04fr] gap-6 items-start">
-                <div className="overflow-hidden rounded-[1.5rem] border border-primary/15 bg-white shadow-xl">
-                  <div className="relative min-h-[300px] sm:min-h-[380px]">
-                    <Image
-                      src="/price-matching-detail.png"
-                      alt="Portrait of confident male pharmacist holding clipboard while female colleague arranging stock in pharmacy"
-                      fill
-                      quality={100}
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 36vw"
-                    />
+                <div>
+                  <div className="overflow-hidden rounded-[1.5rem] border border-primary/15 bg-white shadow-xl">
+                    <div className="relative min-h-[300px] sm:min-h-[380px]">
+                      <Image
+                        src="/price-matching-detail.png"
+                        alt="Portrait of confident male pharmacist holding clipboard while female colleague arranging stock in pharmacy"
+                        fill
+                        quality={100}
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 36vw"
+                      />
+                    </div>
                   </div>
+
+                  <p className="mt-6 text-base sm:text-lg leading-relaxed text-foreground/80">
+                    For further questions about our price matching and insurance billing services, please don&apos;t hesitate to{' '}
+                    <Link
+                      href="/contact-us"
+                      className="font-semibold text-secondary underline decoration-secondary/40 underline-offset-4 transition hover:text-primary hover:decoration-primary"
+                    >
+                      reach us
+                    </Link>{' '}
+                    at your convenience.
+                  </p>
                 </div>
 
                 <div>
@@ -74,11 +90,9 @@ export default function PriceMatchingInsuranceSection() {
                     </p>
                   </div>
 
-                  <p className="mt-6 text-base sm:text-lg leading-relaxed text-foreground/80">
-                    For further questions about our price matching and insurance billing services, please don&apos;t hesitate to reach us at your convenience.
-                  </p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ type ServiceFormShellProps = {
   title: string
   breadcrumbLabel: string
   introTitle: string
-  introParagraphs: string[]
+  introParagraphs: ReactNode[]
   imageSrc: string
   imageAlt: string
   showIntroBar?: boolean
@@ -24,19 +24,19 @@ export default function ServiceFormShell({
 }: ServiceFormShellProps) {
   return (
     <section className="bg-background">
-      <div className="relative min-h-[260px] sm:min-h-[320px] overflow-hidden">
+      <div className="relative min-h-[300px] sm:min-h-[380px] overflow-hidden">
         <Image
           src="/free-consultation-banner.png"
           alt={`${title} banner`}
           fill
           quality={100}
-          className="object-cover object-[center_22%]"
+          className="object-cover object-[center_24%]"
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/12 via-white/38 to-white/72" />
-        <div className="absolute inset-x-0 bottom-0 bg-white/55 backdrop-blur-[2px]">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/8 via-white/24 to-white/78" />
+        <div className="absolute inset-x-0 bottom-0 bg-white/58 backdrop-blur-[2px]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-7 text-center">
             <h1 className="text-4xl sm:text-5xl font-light text-primary tracking-tight">
               {title}
             </h1>
@@ -57,8 +57,8 @@ export default function ServiceFormShell({
 
           <div className="mt-10">
             {showIntroBar ? (
-              <div className="inline-flex max-w-4xl items-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md">
-                {introTitle}
+              <div className="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md text-center">
+                <span className="max-w-4xl">{introTitle}</span>
               </div>
             ) : null}
 
@@ -80,7 +80,7 @@ export default function ServiceFormShell({
                 <div>
                   {introParagraphs.map((paragraph, index) => (
                     <p
-                      key={paragraph}
+                      key={index}
                       className={`${index === 0 ? 'mt-0' : 'mt-4'} text-base sm:text-lg leading-relaxed text-foreground/80`}
                     >
                       {paragraph}

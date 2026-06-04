@@ -2,80 +2,91 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import BrandLogo from '@/components/brand-logo'
 
 export default function Header() {
+  const pathname = usePathname()
+
+  const isActive = (href: string) => pathname === href
+
+  const navItemClass = (href: string) =>
+    `text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] transition-colors leading-none ${
+      isActive(href) ? 'text-primary' : 'text-foreground group-hover:text-primary'
+    }`
+
+  const mobileNavClass = (href: string) =>
+    `shrink-0 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] transition-colors ${
+      isActive(href)
+        ? 'border-primary bg-primary text-white'
+        : 'border-primary/10 bg-white text-foreground hover:text-primary'
+    }`
+
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur-md shadow-sm">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-32">
-          {/* Logo */}
-          <Link href="/" className="flex items-center group hover:opacity-95 transition-opacity -ml-6 xl:-ml-10">
-            <div className="relative h-16 w-[220px]">
+        <div className="flex h-20 items-center justify-center lg:grid lg:h-28 lg:grid-cols-[500px_minmax(0,1fr)_500px] lg:items-center">
+          <BrandLogo variant="header" priority className="relative z-10 shrink-0 justify-self-start lg:-ml-6" />
+
+          <nav className="relative z-10 hidden items-center justify-center gap-3 whitespace-nowrap text-center lg:flex xl:gap-4">
+            <Link href="/" className="group flex flex-col items-center text-center">
+              <span className={navItemClass('/')}>HOME</span>
+            </Link>
+            <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
+            <Link href="/about-us" className="group flex flex-col items-center text-center">
+              <span className={navItemClass('/about-us')}>ABOUT US</span>
+            </Link>
+            <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
+            <Link href="/services" className="group flex flex-col items-center text-center">
+              <span className={navItemClass('/services')}>SERVICES</span>
+            </Link>
+            <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
+            <Link href="/medical-supplies" className="group flex flex-col items-center text-center">
+              <span className={navItemClass('/medical-supplies')}>MEDICAL SUPPLIES</span>
+            </Link>
+            <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
+            <Link href="/resources" className="group flex flex-col items-center text-center">
+              <span className={navItemClass('/resources')}>RESOURCES</span>
+            </Link>
+            <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
+            <Link href="/contact-us" className="group flex flex-col items-center text-center">
+              <span className={navItemClass('/contact-us')}>CONTACT US</span>
+            </Link>
+          </nav>
+
+          <div className="relative z-10 hidden pointer-events-none lg:flex justify-end lg:-mr-6">
+            <div className="relative h-[84px] w-[240px] xl:h-[92px] xl:w-[260px]">
               <Image
-                src="/marigold-logo-generated-bright-v2.png"
-                alt="Marigold Pharmacy Logo"
+                src="/healthmart-attached-logo.png"
+                alt="HealthMart Pharmacy logo"
                 fill
-                priority
-                quality={100}
-                className="object-contain object-left brightness-[1.3] contrast-[1.14] saturate-[1.2] drop-shadow-[0_2px_6px_rgba(255,200,0,0.25)]"
+                className="object-contain object-right"
+                sizes="(max-width: 1280px) 240px, 260px"
               />
             </div>
-          </Link>
-
-          <div className="hidden lg:flex flex-1 flex-col items-center gap-3 px-6">
-            <div className="flex items-center gap-3">
-              <div className="rounded-full bg-muted px-8 py-2 text-sm xl:text-base text-foreground/90 min-w-[460px] text-center">
-                4792 Marigold Ave, Kissimmee, FL 34758
-              </div>
-              <div className="rounded-full bg-gradient-to-r from-primary/85 to-accent px-8 py-2 text-sm xl:text-base text-primary-foreground min-w-[360px] text-center font-medium whitespace-nowrap">
-                Phone: 407 - 201 - 4640 | Fax: 407 - 201 - 4638
-              </div>
-            </div>
-
-            {/* Navigation */}
-            <nav className="flex items-center gap-4 xl:gap-5">
-              <Link href="/" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">HOME</span>
-              </Link>
-              <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="/about-us" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">ABOUT US</span>
-              </Link>
-              <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="/services" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">SERVICES</span>
-              </Link>
-              <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="#medical-supplies" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">MEDICAL SUPPLIES</span>
-              </Link>
-              <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="https://gatusmoringa.com/" target="_blank" rel="noreferrer" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">MORINGA</span>
-              </Link>
-              <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="/resources" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">RESOURCES</span>
-              </Link>
-              <span className="text-muted-foreground/60 text-sm leading-none select-none">|</span>
-              <Link href="/contact-us" className="group flex flex-col items-center text-center">
-                <span className="text-xs sm:text-sm xl:text-[15px] font-semibold uppercase tracking-[0.12em] text-foreground group-hover:text-primary transition-colors leading-none">CONTACT US</span>
-              </Link>
-            </nav>
           </div>
-
-          {/* Top-right logo */}
-          <div className="hidden lg:block relative h-16 w-[150px] mr-1 xl:mr-0">
-            <Image
-              src="/healthmart-header-right.png"
-              alt="HealthMart Pharmacy Logo"
-              fill
-              priority
-              className="object-contain object-right"
-            />
-          </div>
-
         </div>
+
+        <nav className="relative z-10 -mx-2 flex items-center gap-3 overflow-x-auto px-2 pb-4 pt-1 whitespace-nowrap text-center lg:hidden">
+          <Link href="/" className={mobileNavClass('/')}>
+            HOME
+          </Link>
+          <Link href="/about-us" className={mobileNavClass('/about-us')}>
+            ABOUT US
+          </Link>
+          <Link href="/services" className={mobileNavClass('/services')}>
+            SERVICES
+          </Link>
+          <Link href="/medical-supplies" className={mobileNavClass('/medical-supplies')}>
+            MEDICAL SUPPLIES
+          </Link>
+          <Link href="/resources" className={mobileNavClass('/resources')}>
+            RESOURCES
+          </Link>
+          <Link href="/contact-us" className={mobileNavClass('/contact-us')}>
+            CONTACT US
+          </Link>
+        </nav>
       </div>
     </header>
   )

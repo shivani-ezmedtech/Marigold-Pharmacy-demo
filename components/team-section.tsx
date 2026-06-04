@@ -15,7 +15,7 @@ export default function TeamSection() {
             <p className="mt-2 text-muted-foreground">Pharmacist and owner of Marigold Pharmacy</p>
             <Link
               href="#contact"
-              className="mt-8 inline-flex w-fit items-center rounded-full bg-gradient-to-r from-primary/85 to-accent hover:from-primary hover:to-accent px-6 py-3 text-primary-foreground font-semibold hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5"
+              className="mt-8 inline-flex w-fit items-center rounded-full bg-gradient-to-r from-secondary to-primary hover:from-secondary hover:to-primary px-6 py-3 text-white font-semibold hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5"
             >
               Contact Us
             </Link>
@@ -44,7 +44,7 @@ export default function TeamSection() {
                 </p>
                 <Link
                   href="#about"
-                  className="mt-8 inline-flex w-fit items-center rounded-full bg-gradient-to-r from-primary/85 to-accent hover:from-primary hover:to-accent px-7 py-3 text-primary-foreground font-semibold hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5 animate-rise-in [animation-delay:240ms]"
+                  className="mt-8 inline-flex w-fit items-center rounded-full bg-gradient-to-r from-secondary to-primary hover:from-secondary hover:to-primary px-7 py-3 text-white font-semibold hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5 animate-rise-in [animation-delay:240ms]"
                 >
                   About Us
                 </Link>

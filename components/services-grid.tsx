@@ -38,12 +38,12 @@ export default function ServicesGrid() {
               {service.href ? (
                 <Link
                   href={service.href}
-                  className="mt-auto inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-primary/85 to-accent hover:from-primary hover:to-accent px-4 py-2.5 text-primary-foreground text-[13px] font-medium hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5 shadow-sm text-center whitespace-nowrap"
+                  className="mt-auto inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary hover:from-secondary hover:to-primary px-4 py-2.5 text-white text-[13px] font-medium hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5 shadow-sm text-center whitespace-nowrap"
                 >
                   Click Here &rsaquo;
                 </Link>
               ) : (
-                <button className="mt-auto inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-primary/85 to-accent hover:from-primary hover:to-accent px-4 py-2.5 text-primary-foreground text-[13px] font-medium hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5 shadow-sm text-center whitespace-nowrap">
+                <button className="mt-auto inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary hover:from-secondary hover:to-primary px-4 py-2.5 text-white text-[13px] font-medium hover:opacity-95 transition-all duration-300 hover:-translate-y-0.5 shadow-sm text-center whitespace-nowrap">
                   Click Here &rsaquo;
                 </button>
               )}

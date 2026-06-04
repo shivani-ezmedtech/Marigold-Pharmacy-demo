@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 import { FieldError, FieldLabel } from '@/components/form-primitives'
 import ServiceFormShell from '@/components/service-form-shell'
@@ -64,7 +65,15 @@ export default function RefillPrescriptionSection() {
     const { name, value } = e.target as { name: keyof typeof formData; value: string }
     setFormData((prev) => ({ ...prev, [name]: value }))
 
-    if (name === 'lastName' || name === 'firstName' || name === 'phone' || name === 'rx01' || name === 'otcName1' || name === 'otcQty1' || name === 'pickupOrDelivery') {
+    if (
+      name === 'lastName' ||
+      name === 'firstName' ||
+      name === 'phone' ||
+      name === 'rx01' ||
+      name === 'otcName1' ||
+      name === 'otcQty1' ||
+      name === 'pickupOrDelivery'
+    ) {
       const fieldName = name as RefillField
       setErrors((prev) => ({ ...prev, [fieldName]: validateField(fieldName, value) }))
     }
@@ -97,10 +106,19 @@ export default function RefillPrescriptionSection() {
     <ServiceFormShell
       title="Refill Prescription"
       breadcrumbLabel="Refill Prescription"
-      introTitle="You need not worry about running out of your prescription."
+      introTitle="You need not worry about running out of your prescription! Our pharmacist can easily refill it for you and prepare it for pickup or delivery."
       introParagraphs={[
-        'Our pharmacist can easily refill it for you and prepare it for pickup or delivery.',
-        'Refilling your prescription is easy at Broadway Pharmacy. All you have to do is fill out the form below, and we’ll prepare your medication for delivery or pickup, whichever is more convenient for you.',
+        <>
+          Refilling your prescription is easy at Marigold Pharmacy. All you have to do is fill out
+          the form below, and we&apos;ll prepare your medication for{' '}
+          <Link
+            href="/services/free-delivery-services"
+            className="font-semibold text-secondary underline decoration-secondary/40 underline-offset-4 transition hover:text-primary hover:decoration-primary"
+          >
+            delivery
+          </Link>{' '}
+          or pickup, whichever is more convenient for you.
+        </>,
       ]}
       imageSrc="/refill-prescription-detail.png"
       imageAlt="Medicine in a light protected bottle"

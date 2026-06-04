@@ -10,9 +10,15 @@ export type ServiceDetailContent = {
   bullets?: string[]
   postCardParagraphs?: string[]
   leftColumnNote?: string
+  leftColumnLinkText?: string
+  leftColumnLinkHref?: string
+  leftColumnNoteSuffix?: string
   contactCta?: {
     prefix: string
     linkText: string
+    middleText?: string
+    secondLinkText?: string
+    secondHref?: string
     suffix?: string
     href: string
   }
@@ -53,9 +59,9 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
     imageSrc: '/cbd-oil-and-other-herbals-detail.png',
     imageAlt: 'CBD oil and herbal supplements in pharmacy',
     introParagraph:
-      'Broadway Pharmacy stocks CBD Oil and other herbal supplements to provide you with various options for your health and wellness.',
+      'Marigold Pharmacy stocks CBD Oil and other herbal supplements to provide you with various options for your health and wellness.',
     paragraphs: [
-      'Cannabidiol, also known as CBD, is used as a remedy for many common conditions, from boosting the appetite of patients to treating a wide range of mental health problems such as anxiety, addiction, and post-traumatic stress disorder (PTSD). At Broadway Pharmacy, we stock CBD Oil and other herbal supplements to provide you with various options to help you manage and improve your health.',
+      'Cannabidiol, also known as CBD, is used as a remedy for many common conditions, from boosting the appetite of patients to treating a wide range of mental health problems such as anxiety, addiction, and post-traumatic stress disorder (PTSD). At Marigold Pharmacy, we stock CBD Oil and other herbal supplements to provide you with various options to help you manage and improve your health.',
       'If you are interested in learning everything about what CBD Oil has to offer you, you can consult our pharmacist by calling us or dropping by our location. You can also send us a message online.',
     ],
   },
@@ -66,7 +72,7 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
     imageSrc: '/diabetes-specialty-care-center-detail.png',
     imageAlt: 'Doctor consulting a patient about diabetes treatment',
     paragraphs: [
-      'Understanding how diabetes can impact your life is vital to your overall health and well-being. The Diabetes Specialized Care Center at Broadway Pharmacy can help you discover new ways to monitor and manage your care so you can feel your best.',
+      'Understanding how diabetes can impact your life is vital to your overall health and well-being. The Diabetes Specialized Care Center at Marigold Pharmacy can help you discover new ways to monitor and manage your care so you can feel your best.',
       'Our pharmacist and staff take diabetes-specific courses so we can give you up-to-date information and practical tips for everyday living. We also offer free informational sessions at our pharmacy and throughout the community that cover such important topics as blood glucose testing, medication myths, and healthy eating.',
       'An ongoing condition requires ongoing conversation. Talk to us about your diabetes questions, concerns, and victories at the Diabetes Specialized Care Center.',
     ],
@@ -74,7 +80,7 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
   'durable-medical-equipment': {
     title: 'Durable Medical Equipment',
     barText:
-      'Broadway Pharmacy stocks a wide variety of medical equipment which you need at home or in your healthcare facility.',
+      'Marigold Pharmacy stocks a wide variety of medical equipment which you need at home or in your healthcare facility.',
     imageSrc: '/durable-medical-equipment-detail.png',
     imageAlt: 'Durable medical equipment including wheelchair and walker',
     paragraphs: [
@@ -98,9 +104,9 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
     imageSrc: '/health-screenings-detail.png',
     imageAlt: 'Doctor examining wrist of a female patient in medical office',
     paragraphs: [
-      'Participating in regular health and wellness screenings is a proactive way to stay healthy. Broadway Pharmacy offers free health screenings, evaluations, and information sessions to help you understand how to maintain and enjoy a healthy, active lifestyle*.',
-      'We also host regular clinics and information sessions about various health topics*. Stop by the pharmacy or follow us on social media to find out where and when our next meetup will be. Make Broadway Pharmacy your healthcare destination for these screenings and more.',
-      '*At participating Broadway Pharmacy pharmacies',
+      'Participating in regular health and wellness screenings is a proactive way to stay healthy. Marigold Pharmacy offers free health screenings, evaluations, and information sessions to help you understand how to maintain and enjoy a healthy, active lifestyle*.',
+      'We also host regular clinics and information sessions about various health topics*. Stop by the pharmacy or follow us on social media to find out where and when our next meetup will be. Make Marigold Pharmacy your healthcare destination for these screenings and more.',
+      '*At participating Marigold Pharmacy pharmacies',
     ],
   },
   'free-delivery-services': {
@@ -109,7 +115,7 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
     imageSrc: '/free-delivery-services-detail.png',
     imageAlt: 'Delivery van driving through a city in daytime',
     introParagraph:
-      'For patients who need to refill their medications but may not have the means to travel, Broadway Pharmacy is proud to offer delivery services for your convenience. CALL TO INQUIRE IF YOUR PRESCRIPTIONS QUALIFY FOR FREE DELIVERY.',
+      'For patients who need to refill their medications but may not have the means to travel, Marigold Pharmacy is proud to offer delivery services for your convenience. CALL TO INQUIRE IF YOUR PRESCRIPTIONS QUALIFY FOR FREE DELIVERY.',
     paragraphs: [
       'You cannot come to our pharmacy? Then, allow us to deliver your prescriptions or other pharmacy products you need right to your doorstep.',
       'To get started, please complete the form below.',
@@ -133,7 +139,7 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
     imageSrc: '/medication-therapy-management-detail.png',
     imageAlt: 'Pill bottles and twice daily medication box',
     paragraphs: [
-      'Getting the right medication at the right time is critical to your health, whether you are recovering from an accident or managing an ongoing condition. Let your Broadway Pharmacy pharmacist help you make sure your medications are working their best for you.',
+      'Getting the right medication at the right time is critical to your health, whether you are recovering from an accident or managing an ongoing condition. Let your Marigold Pharmacy pharmacist help you make sure your medications are working their best for you.',
       'If you take multiple medications, ask us about a comprehensive medication review. Many health care plans, including some Medicare and Medicaid plans, cover medication review costs. During this review, we will discuss your current medication schedule, look for concerns such as therapy duplications or conflicts, and answer your questions. We will also look for cost-saving alternatives to your current regimen. You will leave our pharmacy with an updated medication list and a personalized action plan so you can achieve the best results.',
     ],
     postCardParagraphs: [
@@ -149,7 +155,7 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
     imageAlt: 'Colorful capsule pills in blister pack arranged in a pattern',
     paragraphs: [
       'If you take multiple medications throughout the day, you know how much effort goes into keeping your pills and your schedule organized.',
-      'Let Broadway Pharmacy organize your medicine for you with multi-dose packaging. When you enroll in this service, our pharmacist places the pills you need for each dose into individual packets.',
+      'Let Marigold Pharmacy organize your medicine for you with multi-dose packaging. When you enroll in this service, our pharmacist places the pills you need for each dose into individual packets.',
       'Instead of picking up different bottles of pills from the pharmacy, you will go home with convenient multi-dose packets. It is a safer, easier way for you to keep on top of your medication.',
       'Stop by our pharmacy to learn how multi-dose packaging can simplify your life.',
     ],
@@ -164,19 +170,27 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
     paragraphs: [
       'Are you looking for hard-to-find medications? Is there a medical equipment, product, or supply you need but cannot find anywhere else? You can request special orders from our pharmacy for medications or products which are not usually available in the market.',
       'We value you as our customer. For your special orders, we can have the product or prescription you request available the next day. You can either choose to pick it up or have our staff deliver it to your home or office.',
-      'For further questions about this service, please do not hesitate to reach us by phone or you may also send us a message online.',
     ],
+    contactCta: {
+      prefix: 'For further questions about this service, please do not hesitate to',
+      linkText: 'reach us',
+      middleText: 'by phone or you may also',
+      secondLinkText: 'send us a message',
+      secondHref: '/contact-us',
+      suffix: 'online.',
+      href: '/contact-us',
+    },
   },
   'otc-drugs-and-dollar-wise-items': {
     title: 'OTC Drugs and $1 Dollar (Dollar Wise) Items',
     breadcrumbTitle: 'OTC Drugs and $1 Dollar (Dollar Wise) Items',
     barText:
-      'Choose from our wide array of one dollar items here at Broadway Pharmacy.',
+      'Choose from our wide array of one dollar items here at Marigold Pharmacy.',
     imageSrc: '/otc-drugs-and-dollar-wise-items-detail.png',
     imageAlt: 'Smiling pharmacist showing products to a multiethnic couple at checkout',
     paragraphs: [
-      'At Broadway Pharmacy, we make sure to provide you with a wide selection of affordable product options so that you will not only have access to a variety of pharmacy items, but you will also get the most bang for your buck on your purchases from our store.',
-      'What are you waiting for? Take advantage of our various one dollar items here at Broadway Pharmacy now. Whether it is cleaning supplies, household items, or personal care products, you can have it at a price that cannot get much lower. Drop by our location to see our whole selection of one dollar products.',
+      'At Marigold Pharmacy, we make sure to provide you with a wide selection of affordable product options so that you will not only have access to a variety of pharmacy items, but you will also get the most bang for your buck on your purchases from our store.',
+      'What are you waiting for? Take advantage of our various one dollar items here at Marigold Pharmacy now. Whether it is cleaning supplies, household items, or personal care products, you can have it at a price that cannot get much lower. Drop by our location to see our whole selection of one dollar products.',
     ],
   },
   'price-matching-insurance-billing': {
@@ -190,7 +204,10 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
       'However, when you are searching for a much more affordable option on your prescription plan but do not have insurance, you can take advantage of our price matching service. We guarantee to offer the lowest cost by matching or beating every published price.',
     ],
     leftColumnNote:
-      "For further questions about our price matching and insurance billing services, please don't hesitate to reach us at your convenience.",
+      "For further questions about our price matching and insurance billing services, please don't hesitate to",
+    leftColumnLinkText: 'reach us',
+    leftColumnLinkHref: '/contact-us',
+    leftColumnNoteSuffix: 'at your convenience.',
   },
   'veterinary-drugs': {
     title: 'Veterinary Drugs',
@@ -199,7 +216,7 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
     imageSrc: '/veterinary-drugs-detail.png',
     imageAlt: 'Veterinarian giving medication to a cat',
     paragraphs: [
-      'One of Broadway Pharmacy’s goals is to meet your veterinary needs. We have a pharmacist on staff who has knowledge in the pharmacology of animals and offers ways of treating both domestic and exotic animals through the pet medicines we provide.',
+      "One of Marigold Pharmacy's goals is to meet your veterinary needs. We have a pharmacist on staff who has knowledge in the pharmacology of animals and offers ways of treating both domestic and exotic animals through the pet medicines we provide.",
       'So, whether you want to maintain the health of your pets or treat their health conditions, you can count on us to provide you with what you need all in one store.',
       'Drop by our pharmacy today and let our staff walk you through our wide selection of medications for your pets or for your veterinary practice. Our pharmacist can also compound medications, fill prescriptions, and manage drug therapies for animals.',
     ],

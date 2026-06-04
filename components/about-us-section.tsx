@@ -77,13 +77,13 @@ export default function AboutUsSection() {
               </h3>
               <div className="mt-4 space-y-4 text-base sm:text-lg leading-relaxed text-foreground/80">
                 <p>
-                  Broadway Pharmacy is an extension of The Medicine Shoppe of Apopka which was founded a decade ago by Dr. Appiahene who earned his Doctor of Pharmacy degree at the University of Florida. Dr. Appiahene has over 30 years experience in Retail Pharmacy practice working for Eckerd Drugs, CVS, and Walgreens, as well as Hospital Pharmacy with Orlando Health.
+                  Marigold Pharmacy is an extension of The Medicine Shoppe of Apopka which was founded a decade ago by Dr. Appiahene who earned his Doctor of Pharmacy degree at the University of Florida. Dr. Appiahene has over 30 years experience in Retail Pharmacy practice working for Eckerd Drugs, CVS, and Walgreens, as well as Hospital Pharmacy with Orlando Health.
                 </p>
                 <p>
                   His passion for Pharmacy and patient care has yielded him many achievements and has built him a large clientele base which he serves all over Central Florida. With special emphasis on patient counseling and education, his practice strives to deliver exceptional personalized care that you and your family would benefit.
                 </p>
                 <p>
-                  At Broadway Pharmacy, our way of giving back to the community that has given so much to us is to help every patient young and old alike with their medication and health needs. We are here to provide you with the medicine and services you need to stay healthy.
+                  At Marigold Pharmacy, our way of giving back to the community that has given so much to us is to help every patient young and old alike with their medication and health needs. We are here to provide you with the medicine and services you need to stay healthy.
                 </p>
               </div>
 

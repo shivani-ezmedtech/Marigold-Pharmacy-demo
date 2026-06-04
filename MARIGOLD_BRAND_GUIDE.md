@@ -107,7 +107,7 @@ Marigold Pharmacy is a community healthcare destination dedicated to quality car
 
 ## Website Structure
 
-### Layout Pages (Following Broadway Pharmacy)
+### Layout Pages (Following Marigold Pharmacy)
 1. **Header** - Fixed navigation with logo, menu, CTAs
    - "Refill Rx" button (outline style)
    - "Transfer Rx" button (filled primary)

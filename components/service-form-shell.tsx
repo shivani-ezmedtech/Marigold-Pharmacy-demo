@@ -5,7 +5,7 @@ type ServiceFormShellProps = {
   title: string
   breadcrumbLabel: string
   introTitle: string
-  introParagraphs: string[]
+  introParagraphs: ReactNode[]
   imageSrc: string
   imageAlt: string
   children: ReactNode
@@ -54,8 +54,8 @@ export default function ServiceFormShell({
           <div className="mt-4 h-px bg-secondary/55" />
 
           <div className="mt-10">
-            <div className="inline-flex max-w-4xl items-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md">
-              {introTitle}
+            <div className="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md text-center">
+              <span className="max-w-4xl">{introTitle}</span>
             </div>
 
             <div className="mt-8 rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-sm">
@@ -76,7 +76,7 @@ export default function ServiceFormShell({
                 <div>
                   {introParagraphs.map((paragraph, index) => (
                     <p
-                      key={paragraph}
+                      key={index}
                       className={`${index === 0 ? 'mt-0' : 'mt-4'} text-base sm:text-lg leading-relaxed text-foreground/80`}
                     >
                       {paragraph}

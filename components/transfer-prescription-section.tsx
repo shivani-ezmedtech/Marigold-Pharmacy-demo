@@ -134,7 +134,7 @@ export default function TransferPrescriptionSection() {
       breadcrumbLabel="Transfer Prescription"
       introTitle="Are you tired of your existing pharmacy?"
       introParagraphs={[
-        'At Broadway Pharmacy we can transfer your prescriptions from your pharmacy so you can experience all the good benefits of using our pharmacy.',
+        'At Marigold Pharmacy we can transfer your prescriptions from your pharmacy so you can experience all the good benefits of using our pharmacy.',
         'Please fill out the form below so we can start the transfer for you. Thank you for choosing us as your healthcare partner. You can also stop by our location and have our pharmacist assist you.',
       ]}
       imageSrc="/pharmacy-consultation-marigold.png"

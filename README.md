@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a comprehensive, professional pharmacy website for **Health Mart Pharmacy** featuring a modern, welcoming design inspired by Broadway Pharmacy. The site showcases all pharmacy services, team information, and provides easy contact options.
+This is a comprehensive, professional pharmacy website for **Health Mart Pharmacy** featuring a modern, welcoming design inspired by Marigold Pharmacy. The site showcases all pharmacy services, team information, and provides easy contact options.
 
 ## Features
 

@@ -81,7 +81,16 @@ export default function ServiceDetailSection({ content }: { content: ServiceDeta
 
                   {content.leftColumnNote ? (
                     <p className="mt-6 text-base sm:text-lg leading-relaxed text-foreground/80">
-                      {content.leftColumnNote}
+                      {content.leftColumnNote}{' '}
+                      {content.leftColumnLinkText && content.leftColumnLinkHref ? (
+                        <Link
+                          href={content.leftColumnLinkHref}
+                          className="font-semibold text-secondary underline decoration-secondary/40 underline-offset-4 transition hover:text-primary hover:decoration-primary"
+                        >
+                          {content.leftColumnLinkText}
+                        </Link>
+                      ) : null}{' '}
+                      {content.leftColumnNoteSuffix ?? ''}
                     </p>
                   ) : null}
                 </div>
@@ -146,6 +155,15 @@ export default function ServiceDetailSection({ content }: { content: ServiceDeta
                 >
                   {content.contactCta.linkText}
                 </Link>
+                {content.contactCta.middleText ? ` ${content.contactCta.middleText} ` : ''}
+                {content.contactCta.secondLinkText && content.contactCta.secondHref ? (
+                  <Link
+                    href={content.contactCta.secondHref}
+                    className="font-semibold text-secondary underline decoration-secondary/40 underline-offset-4 transition hover:text-primary hover:decoration-primary"
+                  >
+                    {content.contactCta.secondLinkText}
+                  </Link>
+                ) : null}
                 {content.contactCta.suffix ? ` ${content.contactCta.suffix}` : ''}
               </p>
             ) : null}

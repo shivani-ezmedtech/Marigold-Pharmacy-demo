@@ -21,7 +21,7 @@ export default function ContactInformationSection() {
             </h2>
 
             <p className="mt-2 max-w-md text-xs sm:text-sm leading-relaxed text-foreground/80">
-              Service Areas Covered: Osceola and Orange Counties and Greater Orlando Area
+              Pharmacy is located in a community with a 70 % Hispanic population. Marigold Pharmacy is right next to Walgreens Pharmacy.
             </p>
 
             <a

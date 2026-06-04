@@ -42,8 +42,10 @@ export default function CompoundingSection() {
 
           <div className="mt-10">
             <div>
-              <div className="mt-6 inline-flex max-w-4xl items-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md">
-                We offer non-sterile compounding for any medications that will be taken orally, such as pills and liquids.
+              <div className="mt-6 flex justify-center">
+                <div className="flex w-full max-w-5xl items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-center text-base sm:text-lg font-medium text-white shadow-md">
+                  We offer non-sterile compounding for any medications that will be taken orally, such as pills and liquids.
+                </div>
               </div>
 
               <div className="mt-8 rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-sm">

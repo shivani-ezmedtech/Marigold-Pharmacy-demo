@@ -108,9 +108,8 @@ export const serviceDetailContent: Record<string, ServiceDetailContent> = {
     breadcrumbTitle: 'Free Delivery Services',
     imageSrc: '/free-delivery-services-detail.png',
     imageAlt: 'Delivery van driving through a city in daytime',
-    introParagraph:
-      'For patients who need to refill their medications but may not have the means to travel, Broadway Pharmacy is proud to offer delivery services for your convenience. CALL TO INQUIRE IF YOUR PRESCRIPTIONS QUALIFY FOR FREE DELIVERY.',
     paragraphs: [
+      'For patients who need to refill their medications but may not have the means to travel, Marigold Pharmacy is proud to offer delivery services for your convenience. CALL TO INQUIRE IF YOUR PRESCRIPTIONS QUALIFY FOR FREE DELIVERY.',
       'You cannot come to our pharmacy? Then, allow us to deliver your prescriptions or other pharmacy products you need right to your doorstep.',
       'To get started, please complete the form below.',
     ],

@@ -99,11 +99,12 @@ export default function RefillPrescriptionSection() {
       breadcrumbLabel="Refill Prescription"
       introTitle="You need not worry about running out of your prescription."
       introParagraphs={[
-        'Our pharmacist can easily refill it for you and prepare it for pickup or delivery.',
+        'You need not worry about running out of your prescription! Our pharmacist can easily refill it for you and prepare it for pickup or delivery.',
         'Refilling your prescription is easy at Broadway Pharmacy. All you have to do is fill out the form below, and we’ll prepare your medication for delivery or pickup, whichever is more convenient for you.',
       ]}
       imageSrc="/refill-prescription-detail.png"
       imageAlt="Medicine in a light protected bottle"
+      showIntroBar={false}
     >
       <form onSubmit={handleSubmit} noValidate className="grid gap-8">
         <div>

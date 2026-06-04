@@ -8,6 +8,7 @@ type ServiceFormShellProps = {
   introParagraphs: string[]
   imageSrc: string
   imageAlt: string
+  showIntroBar?: boolean
   children: ReactNode
 }
 
@@ -18,6 +19,7 @@ export default function ServiceFormShell({
   introParagraphs,
   imageSrc,
   imageAlt,
+  showIntroBar = true,
   children,
 }: ServiceFormShellProps) {
   return (
@@ -54,11 +56,13 @@ export default function ServiceFormShell({
           <div className="mt-4 h-px bg-secondary/55" />
 
           <div className="mt-10">
-            <div className="inline-flex max-w-4xl items-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md">
-              {introTitle}
-            </div>
+            {showIntroBar ? (
+              <div className="inline-flex max-w-4xl items-center rounded-full bg-gradient-to-r from-secondary to-primary px-6 py-3 text-base sm:text-lg font-medium text-white shadow-md">
+                {introTitle}
+              </div>
+            ) : null}
 
-            <div className="mt-8 rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-sm">
+            <div className={`${showIntroBar ? 'mt-8' : 'mt-0'} rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-sm`}>
               <div className="grid grid-cols-1 lg:grid-cols-[0.96fr_1.04fr] gap-6 items-start">
                 <div className="overflow-hidden rounded-[1.5rem] border border-primary/15 bg-white shadow-xl">
                   <div className="relative min-h-[300px] sm:min-h-[380px]">

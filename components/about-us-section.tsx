@@ -135,17 +135,17 @@ export default function AboutUsSection() {
                     </div>
                   ))}
                 </div>
+
+                <p className="mt-8 text-base sm:text-lg leading-relaxed text-foreground/80">
+                  For more information about our pharmacy, do not hesitate to{' '}
+                  <Link href="/contact-us" className="font-semibold text-secondary underline decoration-secondary/40 underline-offset-4 transition hover:text-primary hover:decoration-primary">
+                    contact us
+                  </Link>
+                  .
+                </p>
               </div>
             </div>
           </div>
-
-          <p className="mt-8 text-base sm:text-lg leading-relaxed text-foreground/80">
-            For more information about our pharmacy, do not hesitate to{' '}
-            <Link href="/contact-us" className="font-semibold text-secondary underline decoration-secondary/40 underline-offset-4 transition hover:text-primary hover:decoration-primary">
-              contact us
-            </Link>
-            .
-          </p>
         </div>
       </div>
     </section>

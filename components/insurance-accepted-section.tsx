@@ -4,19 +4,19 @@ import Link from 'next/link'
 export default function InsuranceAcceptedSection() {
   return (
     <section className="bg-background">
-      <div className="relative min-h-[260px] sm:min-h-[320px] overflow-hidden">
+      <div className="relative min-h-[300px] sm:min-h-[380px] overflow-hidden">
         <Image
           src="/free-consultation-banner.png"
           alt="Insurance Accepted banner"
           fill
           quality={100}
-          className="object-cover object-[center_22%]"
+          className="object-cover object-[center_24%]"
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/12 via-white/38 to-white/72" />
-        <div className="absolute inset-x-0 bottom-0 bg-white/55 backdrop-blur-[2px]">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/8 via-white/24 to-white/78" />
+        <div className="absolute inset-x-0 bottom-0 bg-white/58 backdrop-blur-[2px]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-7 text-center">
             <h1 className="text-4xl sm:text-5xl font-light text-primary tracking-tight uppercase">
               INSURANCE ACCEPTED
             </h1>

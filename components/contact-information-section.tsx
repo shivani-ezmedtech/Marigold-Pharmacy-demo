@@ -4,16 +4,16 @@ export default function ContactInformationSection() {
   return (
     <section
       id="contact-information"
-      className="relative overflow-hidden py-5 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/20 via-accent/15 to-secondary/20"
+      className="relative overflow-hidden bg-gradient-to-r from-secondary to-primary px-4 py-5 sm:px-6 lg:px-8"
     >
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -left-24 top-10 h-40 w-40 rounded-full bg-primary/20 blur-3xl" />
-        <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-secondary/18 blur-3xl" />
-        <div className="absolute left-1/4 bottom-0 h-36 w-36 rounded-full bg-accent/16 blur-3xl" />
+        <div className="absolute -left-24 top-10 h-40 w-40 rounded-full bg-secondary/35 blur-3xl" />
+        <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-primary/30 blur-3xl" />
+        <div className="absolute left-1/4 bottom-0 h-36 w-36 rounded-full bg-primary/20 blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] overflow-hidden rounded-[1.25rem] border border-white/25 bg-white/72 shadow-lg backdrop-blur-sm">
+        <div className="mx-auto grid max-w-[1080px] grid-cols-1 lg:grid-cols-[0.88fr_1.12fr] overflow-hidden rounded-[1.25rem] border border-white/25 bg-white/72 shadow-lg backdrop-blur-sm">
           <div className="bg-background/92 p-4 sm:p-5 lg:p-5.5 animate-rise-in">
             <h2 className="text-2xl sm:text-3xl font-light leading-tight text-primary">
               Contact
@@ -26,14 +26,14 @@ export default function ContactInformationSection() {
 
             <a
               href="tel:4072014640"
-              className="mt-3 inline-flex w-full max-w-sm items-center justify-center rounded-full bg-gradient-to-r from-primary/90 to-accent px-5 py-2.5 text-sm sm:text-base font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+              className="mt-3 inline-flex w-full max-w-sm items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all duration-300 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-xl sm:text-base"
             >
               Phone: 407 - 201 - 4640
             </a>
 
             <div className="my-3 h-px bg-border" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] sm:text-xs text-foreground/85">
+            <div className="grid grid-cols-1 gap-2 text-[11px] text-foreground/85 sm:grid-cols-2 sm:text-xs">
               <div className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <p className="leading-snug">
@@ -45,7 +45,7 @@ export default function ContactInformationSection() {
 
               <div className="flex items-start gap-2">
                 <Printer className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />
-                <p>Fax: 407 - 201 - 4638</p>
+                <p className="whitespace-nowrap">Fax: 407 - 201 - 4638</p>
               </div>
             </div>
 

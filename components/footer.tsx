@@ -1,64 +1,112 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import { Facebook, Instagram, Linkedin } from 'lucide-react'
+import BrandLogo from '@/components/brand-logo'
+
+const exploreLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about-us', label: 'About Us' },
+  { href: '/services', label: 'Services' },
+  { href: '/contact-us', label: 'Contact Us' },
+]
+
+const footerLinks = [
+  { href: '/resources', label: 'Resources' },
+  { href: '/medical-supplies', label: 'Medical Supplies' },
+  { href: '/free-consultation', label: 'Free Consultation' },
+]
+
+const socialLinks = [
+  {
+    href: 'https://www.facebook.com/',
+    label: 'Facebook',
+    icon: Facebook,
+    hoverClass: 'hover:bg-[#1877F2] hover:border-[#1877F2]',
+  },
+  {
+    href: 'https://www.instagram.com/',
+    label: 'Instagram',
+    icon: Instagram,
+    hoverClass: 'hover:bg-[#E1306C] hover:border-[#E1306C]',
+  },
+  {
+    href: 'https://www.linkedin.com/',
+    label: 'LinkedIn',
+    icon: Linkedin,
+    hoverClass: 'hover:bg-[#0A66C2] hover:border-[#0A66C2]',
+  },
+]
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-white py-10 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1440px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] items-center gap-8 border-b border-white/10 pb-8">
-          <Link href="/" className="flex items-center justify-start">
-            <div className="relative h-16 w-[220px]">
-              <Image
-                src="/marigold-logo-generated-bright-v2.png"
-                alt="Marigold Pharmacy Logo"
-                fill
-                className="object-contain object-left brightness-[1.3] contrast-[1.14] saturate-[1.2] drop-shadow-[0_2px_6px_rgba(255,200,0,0.25)]"
-              />
-            </div>
-          </Link>
+    <footer className="relative overflow-hidden bg-[#f6f0e6] px-4 py-10 text-foreground sm:px-6 sm:py-12 lg:px-8">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent" />
+        <div className="absolute -left-12 top-12 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute right-0 bottom-0 h-48 w-48 rounded-full bg-secondary/10 blur-3xl" />
+      </div>
 
-          <div className="flex flex-col items-center gap-4 text-center">
-            <div className="rounded-full bg-white/10 px-8 py-2 text-sm xl:text-base text-white/90 min-w-[460px] text-center">
-              4792 Marigold Ave, Kissimmee, FL 34758
-            </div>
-
-            <nav className="flex items-center flex-wrap justify-center gap-4 xl:gap-5 text-white/90">
-              <Link href="/" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">HOME</Link>
-              <span className="text-white/35">|</span>
-              <Link href="/about-us" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">ABOUT US</Link>
-              <span className="text-white/35">|</span>
-              <Link href="#services" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">SERVICES</Link>
-              <span className="text-white/35">|</span>
-              <Link href="#medical-supplies" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">MEDICAL SUPPLIES</Link>
-              <span className="text-white/35">|</span>
-              <Link href="https://gatusmoringa.com/" target="_blank" rel="noreferrer" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">MORINGA</Link>
-              <span className="text-white/35">|</span>
-              <Link href="/resources" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">RESOURCES</Link>
-              <span className="text-white/35">|</span>
-              <Link href="/contact-us" className="hover:text-white transition text-sm font-medium uppercase tracking-[0.12em]">CONTACT US</Link>
-            </nav>
-
-            <div className="rounded-full bg-gradient-to-r from-primary/85 to-accent px-8 py-2 text-sm xl:text-base text-primary-foreground min-w-[360px] text-center font-medium whitespace-nowrap">
-              Phone: 407 - 201 - 4640 | Fax: 407 - 201 - 4638
-            </div>
+      <div className="relative z-10 mx-auto max-w-[1140px]">
+        <div className="grid grid-cols-1 gap-10 border-b border-primary/10 pb-8 lg:grid-cols-[520px_minmax(0,1fr)_0.7fr] lg:items-center">
+          <div className="flex items-center">
+            <BrandLogo variant="footer" className="block" />
           </div>
 
-          <Link href="/" className="flex items-center justify-end">
-            <div className="relative h-16 w-[150px]">
-              <Image
-                src="/healthmart-header-right.png"
-                alt="HealthMart Pharmacy Logo"
-                fill
-                className="object-contain object-right"
-              />
+          <div className="flex flex-col items-start">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.28em] text-secondary/75">
+              Explore
+            </h3>
+            <nav className="mt-5 flex flex-col gap-3">
+              {exploreLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium uppercase tracking-[0.14em] text-foreground/85 transition hover:text-primary sm:text-base"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="flex flex-col items-center justify-center lg:items-center">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.28em] text-secondary/75">
+              Social Media
+            </h3>
+            <div className="mt-5 flex items-center justify-center gap-3">
+              {socialLinks.map((social) => {
+                const Icon = social.icon
+
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={social.label}
+                    className={`flex h-11 w-11 items-center justify-center rounded-full border border-secondary/12 bg-white/70 text-secondary transition hover:-translate-y-0.5 hover:text-white ${social.hoverClass}`}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                )
+              })}
             </div>
-          </Link>
+          </div>
         </div>
 
-        <div className="pt-8">
-          <p className="text-center text-white/70 text-sm">
-            &copy; 2024 Marigold Pharmacy. All rights reserved.
-          </p>
+        <div className="flex flex-col gap-4 pt-5 text-sm text-foreground/65 md:flex-row md:items-center md:justify-between">
+          <p>&copy; 2026 Marigold Pharmacy. All rights reserved.</p>
+
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            {footerLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition hover:text-secondary"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
